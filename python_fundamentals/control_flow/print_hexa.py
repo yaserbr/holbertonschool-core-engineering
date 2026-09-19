@@ -2,5 +2,5 @@
 
 text = ""
 for i in range(99):
-    text = text + "" + str(i) + " = " + str(hex(i)) + "\n"
+    text += "{} = {}\n".format(i, hex(i))
 print(text, end="")
