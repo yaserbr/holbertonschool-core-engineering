@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
 
+text = ""
 for i in range(99):
-    print(f"{i} = {hex(i)}")
+    text = text + "" + str(i) + " = " + str(hex(i)) + "\n"
+print(text, end="")
