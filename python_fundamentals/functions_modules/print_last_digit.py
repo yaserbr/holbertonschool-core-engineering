@@ -3,4 +3,6 @@ def print_last_digit(number):
     if number < 0:
         number = -number
     temp = str(number)
-    return int(temp[-1])
+    last_digit = int(temp[-1])
+    print(last_digit)
+    return last_digit
