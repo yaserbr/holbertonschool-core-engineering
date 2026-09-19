@@ -4,9 +4,9 @@ number = __import__('random').randint(-10000, 10000)
 
 last_digit = number - int(number / 10) * 10
 if last_digit > 5:
-    print(f"Last digit of {number} is {last_digit} and is greater than 5")
+    text = "greater than 5"
 elif last_digit == 0:
-    print(f"Last digit of {number} is {last_digit} and is 0")
+    text = "0"
 else:
-    print(f"Last digit of {number} is {last_digit}")
-    print("and is less than 6 and not 0")
+    text = "less than 6 and not 0"
+print(f"Last digit of {number} is {last_digit} and is {text}")
