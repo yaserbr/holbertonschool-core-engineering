@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Module that defines a Square class."""
 
+
 class Square:
     """Represents a square."""
 
@@ -10,4 +11,4 @@ class Square:
         Args:
             size (int): The size of the square.
         """
-        self.size = size
+        self.__size = size
