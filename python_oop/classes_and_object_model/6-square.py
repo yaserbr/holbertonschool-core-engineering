@@ -33,6 +33,7 @@ class Square:
     def position(self):
         """Getter for the position attribute."""
         return self.__position
+
     @position.setter
     def position(self, value):
         """Setter for the position attribute."""
@@ -48,9 +49,14 @@ class Square:
         """Prints the square using the '#' character."""
         if self.size == 0:
             print()
-        else:
-            for _ in range(self.size):
-                print("#" * self.size)
+            return
+
+        for _ in range(self.position[1]):
+            print()
+
+        for _ in range(self.size):
+            print("{}{}".format(" " * self.position[0], "#" * self.size))
+
     def __str__(self):
         self.my_print()
         return ""
