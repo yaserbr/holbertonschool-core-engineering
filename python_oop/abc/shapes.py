@@ -20,7 +20,7 @@ class Shape(ABC):
 def shape_info(Shape):
     """Accepts an object of type Shape and prints its area and perimeter."""
     print("Area: {}".format(Shape.area()))
-    print("perimeter: {}".format(Shape.perimeter()))
+    print("Perimeter: {}".format(Shape.perimeter()))
 
 
 class Circle(Shape):
