@@ -20,11 +20,3 @@ class Cat(Animal):
     """Represents a cat, which is a subclass of Animal."""
     def speak(self):
         return "Meow"
-
-
-dog = Dog()
-
-print(isinstance(dog, Dog))
-print(isinstance(dog, Animal))
-
-print(issubclass(Dog, Animal))
