@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-from shapes import Circle, Rectangle, shape_info
 
-circle = Circle(radius=5)
-rectangle = Rectangle(width=4, height=7)
+from flyingfish import Fish, FlyingFish
 
-shape_info(circle)
-shape_info(rectangle)
+flying_fish = FlyingFish()
+flying_fish.swim()
+flying_fish.fly()
+flying_fish.habitat()
