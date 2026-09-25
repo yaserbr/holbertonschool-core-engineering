@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Module that defines the BaseGeometry class."""
+
 
 class Animal:
     """Represents an animal."""
