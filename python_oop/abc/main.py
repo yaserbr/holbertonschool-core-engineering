@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
+from dragon import Dragon
 
-from flyingfish import Fish, FlyingFish
-
-flying_fish = FlyingFish()
-flying_fish.swim()
-flying_fish.fly()
-flying_fish.habitat()
+dragon = Dragon()
+dragon.swim()
+dragon.fly()
+dragon.roar()
