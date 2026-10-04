@@ -5,5 +5,5 @@
 def write_file(filename="", text=""):
     """function started"""
     with open(filename, "w", encoding="utf-8") as file:
-        file.write(text, end="")
-    return text
+        file.write(text)
+        return file.write(text)
