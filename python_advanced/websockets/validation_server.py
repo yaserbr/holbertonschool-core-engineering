@@ -3,14 +3,17 @@
 
 import asyncio
 from websockets.asyncio.server import serve
+from websockets.exceptions import ConnectionClosed
 
 
 async def connection_handler(websocket):
 
     async for item in websocket:
-        if len(item.strip()) == 0:
+        temp = item.strip()
+        if len(temp) == 0:
             await websocket.send("ERR:EMPTY")
-        await websocket.send(f"OK:{item}")
+        else:
+            await websocket.send(f"OK:{item}")
 
 
 async def main():
