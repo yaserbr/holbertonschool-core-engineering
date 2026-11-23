@@ -4,17 +4,22 @@ import asyncio
 from websockets.asyncio.client import connect
 
 
+async def receive_messages(ws):
+    async for message in ws:
+        print(f"\nReceived: {message}")
+
+
 async def main():
-    async with connect("ws://127.0.0.1:8765") as websocket:
+    async with connect("ws://127.0.0.1:8765") as ws:
+        asyncio.create_task(receive_messages(ws))
+
         while True:
             message = await asyncio.to_thread(input, "> ")
 
             if message == "exit":
                 break
 
-            await websocket.send(message)
-            response = await websocket.recv()
-            print(f"< {response}")
+            await ws.send(message)
 
 
 if __name__ == "__main__":
