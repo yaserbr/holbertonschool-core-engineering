@@ -10,7 +10,7 @@ async def receive_messages(ws):
 
 
 async def main():
-    async with connect("ws://127.0.0.1:8765") as ws:
+    async with connect("ws://localhost:8000/ws") as ws:
         asyncio.create_task(receive_messages(ws))
 
         while True:

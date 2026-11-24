@@ -13,7 +13,7 @@ async def connect_and_send(uri: str, text: str) -> str:
 
 
 async def main():
-    s = await connect_and_send("ws://127.0.0.1:8765", "hello client1")
+    s = await connect_and_send("ws://localhost:8000/ws", "hello client1")
     print(s, end="")
 
 
